@@ -15,7 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'assignment/*.js',
+      // 'assignment/*.js',
+      'presto-pesto/*.js',
       'tests/*.js'
     ],
 
@@ -37,9 +38,9 @@ module.exports = function(config) {
     reporters: ['progress', 'junit'],
 
     junitReporter: {
-	outputDir: "test-output",
-	outputFile: "test-results.xml",
-	useBrowserName: false
+    	outputDir: "test-output",
+    	outputFile: "test-results.xml",
+    	useBrowserName: false
     },
 
     // web server port
