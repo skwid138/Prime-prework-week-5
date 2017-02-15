@@ -40,7 +40,8 @@ somethingFun.isHappy = function(happy) {
 console.log(somethingFun.isHappy(true));
 console.log(somethingFun.isHappy(false));
 
-// DON'T TOUCH Below, for purpose of the tests
+// DO NOT TOUCH CODE BELOW
+// for purpose of the test files only
 module.exports = {
   somethingFun: somethingFun
 };
