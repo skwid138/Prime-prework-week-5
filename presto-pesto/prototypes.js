@@ -1,18 +1,46 @@
-function Animal(first, last, birthday) {
+function Animal(first, last, type) {
     this.firstName = first;
     this.lastName = last;
-    this.age = function () {
-        // This is a simplified function that only works for certain birthdays
-        return new Date().getUTCFullYear() - birthday.getUTCFullYear();
-    };
+    this.type = type;
 }
 
-var lilSebastian = new Animal("Little", "Sebastian", new Date(1986, 1));
+// here's an example Animal:
+var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 
-console.log(lilSebastian.age());
+// PART 1
+// create a new animal named "somethingFun" with a first name of "Something" a last name of "Fun" and a type of "Cat"
+var somethingFun = new Animal("Somthing", "Fun", "Cat");
 
-// What is the value of lilSebastian.birthday?
-var lilSebastianBirthday = undefined;
+// PART 2
+// console log out somethingFun's first and last name
+console.log(somethingFun.firstName);
+console.log(somethingFun.lastName);
 
-// What is the value of lilSebastian.age() ?
-var lilSebastianAge = 31;
+// PART 3 (Hard Mode)
+// add a method to somethingFun named "meow()" that console logs "moew" when called. ex: somethingFun.meow()
+somethingFun.meow = function() {
+  console.log('meow');
+};
+
+console.log(somethingFun.meow());
+
+// PART 4 (Pro Mode)
+// add another method to somethingFun named "isHappy" that receives a boolean argument "happy"
+// within this method, check if "happy" is true
+// if so, console log "purrrrrr"
+// if not, console log "crabby face"
+somethingFun.isHappy = function(happy) {
+  if(happy){
+    console.log('purrrrrr');
+  }else{
+    console.log('crabby face');
+  }
+};
+
+console.log(somethingFun.isHappy(true));
+console.log(somethingFun.isHappy(false));
+
+// DON'T TOUCH Below, for purpose of the tests
+module.exports = {
+  somethingFun: somethingFun
+};
