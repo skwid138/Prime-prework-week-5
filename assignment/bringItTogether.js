@@ -1,31 +1,35 @@
-console.log('File loaded!');
-
-// Call the function defined below to actually do something!
+// Modeled after Tier 2 Bonus Calculator challenge. Convert arrays of rooms to Room objects
 convertRooms();
 
 function convertRooms() {
-  // Each array of data is in the order of: [total seats needed, rollingChairs, cubes, color of seats]
-  var roomsArray = [[20, 10, 10, 'red'], [24, 10, 14, 'blue'], [23, 8, 11, 'black'], [18, 5, 13, 'blue']];
+  // [seats needed, rollingChairs, cubes, color of seats]
+  var roomsArray = [[20, 14, 12, 'red'], [24, 10, 40, 'blue'], [23, 18, 30, 'black'], [18, 13, 13, 'blue']];
 
-  console.log(roomsArray);
+  for(var i = 0; i < roomsArray.length; i++) {
+    var room = new Room(roomsArray[i]);
+    console.log('new room: ', room);
+  }
 
-  // Convert each room array into a Room object
-  // Write code here, remember to log the new object you create at the end of
-  // each iteration.
 }
 
 /**
  * Represents a classroom at Prime
  * @constructor
- * @param {Array} roomArray - an array of data representing a single room
- *  @property {Number} capacity - number of seats in this room
- *  @property {Array} rollingChairs - an array of rolling chair objects
- *  @property {Array} cubes - an array of cube objects
- *  @property {Array} color - color of rollingChairs
+ * @param {Array} array - a single room array of data
 **/
-function Room(roomArray) {
-  // Write constructor logic here to convert the array into a Room object
-  // You will need to also create RollingChair and Cube objects!
+function Room(array) {
+  this.capacity = array[0];
+  this.rollingChairs = [];
+  // array[1] is a our number of chairs
+  for(var j = 0; j < array[1]; j++) {
+    this.rollingChairs.push(new RollingChair('rolling', array[3]));
+  }
+  this.cubes = [];
+  // array[2] is a number of cubes
+  for(j = 0; j < array[2]; j++) {
+    this.cubes.push(new Cube(24));
+    // console.log('cube vol: ', this.cubes[j].volume());
+  }
 }
 
 /**
@@ -35,7 +39,8 @@ function Room(roomArray) {
  * @param {String} color - color of the seat fabric
 **/
 function RollingChair(type, color) {
-  // Write constructor logic here to create a single rolling chair object
+  this.type = type;
+  this.color = color;
 }
 
 /**
@@ -45,10 +50,13 @@ function RollingChair(type, color) {
  * @property {Function} volume - method that calculates the volume of the cube
 **/
 function Cube(length) {
-  // Write constructor logic here to create a single cube seat object
+  this.length = length;
+  this.volume = function() {
+    return Math.pow(this.length, 3);
+  };
 }
 
-// -- DON'T TOUCH CODE BELOW --
+// Export for running tests
 module.exports = {
   Room: Room,
   convertRooms: convertRooms,

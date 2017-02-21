@@ -1,6 +1,5 @@
 var chai = require('chai');
-// var rooms = require('../assignment/bringItTogether');
-var rooms = require('../presto-pesto/bringItTogether.solution');
+var rooms = require('../assignment/bringItTogether');
 
 describe('Testing the Classroom Builder Application', function() {
 
