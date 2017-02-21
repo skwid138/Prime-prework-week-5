@@ -24,7 +24,6 @@ somethingFun.meow = function() {
 
 console.log(somethingFun.meow());
 
-// PART 4 (Pro Mode)
 // add another method to somethingFun named "isHappy" that receives a boolean argument "happy"
 // within this method, check if "happy" is true
 // if so, console log "purrrrrr"
