@@ -55,12 +55,11 @@ Above, we introduced the concept of levels of difficulty. "Mode" is how we will 
 * what to expect when attempting each mode
 * if they are required or not
 
-
-**Base Mode** - required
-
-**Hard Mode** - optional, stretches your understanding
-
-**Pro Mode** - optional, stretches your understanding and may require additional research
+Mode | Description
+-- | --
+Base | required 
+Hard | optional, stretches your understanding
+Pro | optional, stretches your understanding and may require additional research
 
 #### Pro Mode Details
 In *bringItTogether.js* there are many tasks that take multiple steps to complete.
