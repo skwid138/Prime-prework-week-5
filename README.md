@@ -56,7 +56,7 @@ Above, we introduced the concept of levels of difficulty. "Mode" is how we will 
 * if they are required or not
 
 Mode | Description
--- | --
+--- | ---
 Base | required 
 Hard | optional, stretches your understanding
 Pro | optional, stretches your understanding and may require additional research
