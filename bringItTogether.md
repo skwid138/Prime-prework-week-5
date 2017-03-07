@@ -1,4 +1,4 @@
-# Week 4 Classroom Builder Application
+# Bring It Together: Classroom Builder Application
 
 You've practiced your new skills with Arrays, Objects, Constructors, and Loops. Now it's time to put them all together!
 
@@ -8,7 +8,7 @@ With the business problem presented in this assignment, we will be a little clos
 
 You will be building an application that creates and assigns seating for each of Prime's classrooms.
 
-Extend the code in `bringItTogether.js` inside your `assignments` folder. Consider using some of the code you wrote in earlier assignments from this week as they will contain useful functionality.
+Extend the code in *bringItTogether.js* inside your *assignments* folder. Consider using some of the code you wrote in earlier assignments from this week as they will contain useful functionality.
 
 ## Instructions
 
