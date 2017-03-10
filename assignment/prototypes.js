@@ -9,7 +9,7 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 
 // PART 1
 // create a new animal named "somethingFun" with a first name of "Something" a last name of "Fun" and a type of "Cat"
-var somethingFun = new Animal("Somthing", "Fun", "Cat");
+var somethingFun = new Animal("Something", "Fun", "Cat");
 
 // PART 2
 // console log out somethingFun's first and last name
@@ -22,7 +22,7 @@ somethingFun.meow = function() {
   console.log('meow');
 };
 
-console.log(somethingFun.meow());
+somethingFun.meow();
 
 // add another method to somethingFun named "isHappy" that receives a boolean argument "happy"
 // within this method, check if "happy" is true
@@ -36,11 +36,11 @@ somethingFun.isHappy = function(happy) {
   }
 };
 
-console.log(somethingFun.isHappy(true));
-console.log(somethingFun.isHappy(false));
+somethingFun.isHappy(true);
+somethingFun.isHappy(false);
 
 // DO NOT TOUCH CODE BELOW
 // for purpose of the test files only
-module.exports = {
-  somethingFun: somethingFun
-};
+// module.exports = {
+//   somethingFun: somethingFun
+// };

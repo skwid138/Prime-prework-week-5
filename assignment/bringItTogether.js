@@ -1,3 +1,4 @@
+
 // Modeled after Tier 2 Bonus Calculator challenge. Convert arrays of rooms to Room objects
 convertRooms();
 
@@ -56,10 +57,24 @@ function Cube(length) {
   };
 }
 
-// Export for running tests
-module.exports = {
-  Room: Room,
-  convertRooms: convertRooms,
-  RollingChair: RollingChair,
-  Cube: Cube
-};
+/**
+ * Represents a classroom at Prime
+ * @constructor
+ * @param {Array} roomArray - an array of data representing a single room
+ *  @property {Number} capacity - number of seats in this room
+ *  @property {Array} rollingChairs - an array of rolling chair objects
+ *  @property {Array} cubes - an array of cube objects
+ *  @property {Array} color - color of rollingChairs
+**/
+
+
+
+
+
+// -- DON'T TOUCH CODE BELOW --
+// module.exports = {
+//   Room: Room,
+//   convertRooms: convertRooms,
+//   RollingChair: RollingChair,
+//   Cube: Cube
+// };
