@@ -1,6 +1,3 @@
-// var chai = require('chai');
-// var rooms = require('../assignment/bringItTogether');
-
 describe('promode Testing the Classroom Builder Application', function() {
 
   describe('the Room constructor function', function() {
@@ -68,27 +65,29 @@ describe('promode Testing the Classroom Builder Application', function() {
   // after(function() {
   //   constructorSpy.restore();
   // });
-  //
-  // describe('the createBooksWithConstructor function', function() {
+
+  // describe('the createRoomsWithConstructor function', function() {
+  //   var  constructorSpy = sinon.spy(Room);
   //   it('should call the Book constructor 3 times', function() {
-  //     var books = objects.createBooksWithConstructor();
+  //     var books = convertRooms();
   //
   //     // sinon spy counts the number of times the constructor was called
-  //     chai.expect(constructorSpy.calledThrice).to.be.true;
+  //     chai.expect(constructorSpy.called).to.be.true;
   //   });
   //
-  //   it('should return 3 objects in an array', function() {
-  //     var books = objects.createBooksWithConstructor();
-  //     chai.expect(books).to.have.lengthOf(3);
-  //   });
+  //   // it('should return 3 objects in an array', function() {
+  //   //   var books = convertRooms();
+  //   //   chai.expect(books).to.have.lengthOf(3);
+  //   // });
   //
-  //   it('should return book objects with 4 specific properties', function() {
-  //     var books = objects.createBooksWithConstructor();
-  //     chai.expect(books[0]).to.have.ownProperty('title');
-  //     chai.expect(books[0]).to.have.ownProperty('author');
-  //     chai.expect(books[0]).to.have.ownProperty('pageCount');
-  //     chai.expect(books[0]).to.have.ownProperty('haveRead');
-  //   });
+  //   // it('should return book objects with 4 specific properties', function() {
+  //   //   var books = convertRooms();
+  //   //   chai.expect(books[0]).to.have.ownProperty('title');
+  //   //   chai.expect(books[0]).to.have.ownProperty('author');
+  //   //   chai.expect(books[0]).to.have.ownProperty('pageCount');
+  //   //   chai.expect(books[0]).to.have.ownProperty('haveRead');
+  //   // });
+  //   constructorSpy.reset();
   // });
 
 });
