@@ -12,9 +12,17 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 var somethingFun = new Animal("Something", "Fun", "Cat");
 
 // PART 2
-// console log out somethingFun's first and last name
-console.log(somethingFun.firstName);
-console.log(somethingFun.lastName);
+// Complete this function so that it will log the first and last name of
+// an Animal object that is passed to it.
+function animalFirstandLastName(animalObject){
+// console log out somethingFun's first name here:
+console.log(animalObject.firstName);
+
+// console log out somethingFun's last name here:
+console.log(animalObject.lastName);
+}
+
+
 
 // PART 3 (Hard Mode)
 // add a method to somethingFun named "meow()" that console logs "moew" when called. ex: somethingFun.meow()
