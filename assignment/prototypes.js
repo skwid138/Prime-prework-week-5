@@ -20,9 +20,3 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 // within this method, check if "happy" is true
 // if so, console log "purr"
 // if not, console log "crabby face"
-
-// DO NOT TOUCH CODE BELOW
-// for purpose of the test files only
-module.exports = {
-  somethingFun: somethingFun
-};
