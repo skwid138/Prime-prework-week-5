@@ -34,11 +34,11 @@ somethingFun.meow();
 
 // add another method to somethingFun named "isHappy" that receives a boolean argument "happy"
 // within this method, check if "happy" is true
-// if so, console log "purrrrrr"
+// if so, console log "purr"
 // if not, console log "crabby face"
 somethingFun.isHappy = function(happy) {
   if(happy){
-    console.log('purrrrrr');
+    console.log('purr');
   }else{
     console.log('crabby face');
   }
