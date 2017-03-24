@@ -78,6 +78,17 @@ var roomsArray = [[20, 14, 12, 'red'], [24, 10, 40, 'blue'], [23, 18, 30, 'black
 // 5 - Convert each room array to a room object
 // 5a - Loop through the roomsArray
 // In the body of the loop, call the convertRooms function for each room array
-for(var i = 0; i < roomsArray.length; i++) {
-  convertRooms(roomsArray[i]);
+// store all the converted rooms objects in convertedRoomArray
+function convertRoomsList(arrayOfRooms){
+  var convertedRoomsArray = [];
+  for(var i = 0; i < roomsArray.length; i++) {
+    convertedRoomsArray.push(convertRooms(roomsArray[i]));
+  }
+  //return convertedRoomsArray to make it available outside this function:
+  return convertedRoomsArray;
 }
+
+//Call convertRoomsList
+convertRoomsList(roomsArray);
+//Log the new roomsObjectArray
+// console.log(convertedRoomsArray);
