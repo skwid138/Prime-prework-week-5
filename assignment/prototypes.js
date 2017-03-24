@@ -18,7 +18,7 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 
 // add another method to somethingFun named "isHappy" that receives a boolean argument "happy"
 // within this method, check if "happy" is true
-// if so, console log "purrrrrr"
+// if so, console log "purr"
 // if not, console log "crabby face"
 
 // DO NOT TOUCH CODE BELOW
