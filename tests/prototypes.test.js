@@ -19,10 +19,6 @@ describe('basemode prototype answers', function() {
     logSpy.restore();
   });
 
-});
-
-describe('basemode prototype answers', function() {
-
   it('should log the firstName and lastName properties of an animal object in 2 separate logs', function() {
     var logSpy = sinon.spy(console, "log");
     var daniel = {
