@@ -46,9 +46,3 @@ somethingFun.isHappy = function(happy) {
 
 somethingFun.isHappy(true);
 somethingFun.isHappy(false);
-
-// DO NOT TOUCH CODE BELOW
-// for purpose of the test files only
-// module.exports = {
-//   somethingFun: somethingFun
-// };
