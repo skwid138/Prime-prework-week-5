@@ -56,10 +56,10 @@ Above, we introduced the concept of levels of difficulty. "Mode" is how we will 
 * if they are required or not
 
 Mode | Description
---- | ---
+---  | ---
 Base | required 
 Hard | optional, stretches your understanding
-Pro | optional, stretches your understanding and may require additional research
+Pro  | optional, stretches your understanding and may require additional research
 
 #### Pro Mode Details
 In *bringItTogether.js* there are many tasks that take multiple steps to complete.
@@ -69,4 +69,4 @@ The problem description is in a separate markdown file: [bringItTogether.md](bri
 **IMPORTANT:** You will need to source this file into the *index.html*.
 
 ### Assignment Submission
-Check in your repo, then turn in your work via the Prime Academy Assignment Application at http://primeacademy.io, as usual and don't hesitate to hit up the Slack channel as needed!
+Check in your repo, then turn in your work via the Prime Academy Assignment Application at [http://primeacademy.io](http://primeacademy.io), as usual and don't hesitate to hit up the Slack channel as needed!
