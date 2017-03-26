@@ -35,8 +35,6 @@ describe('basemode prototype answers', function() {
 
     logSpy.restore();
   });
-
-
 });
 
 describe('hardmode prototype answers', function() {
