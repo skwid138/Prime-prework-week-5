@@ -9,6 +9,7 @@ function Cube(length) {
   // 1a - create a length property that is equal to the provided argument, length
   this.length = length;
   // 1b - Create a volume method that returns the volume of the cube
+  // PRO TIP: A "method" is a function that is assigned to an object's property
   // The volume of a cube is the length to the third power
   // PRO TIP: Consider using Math.pow, a built-in JavaScript method to calculate this
   this.volume = function() {
