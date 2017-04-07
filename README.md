@@ -21,8 +21,8 @@ Finally, remember `console.log()` is your friend and you can use it in conjuncti
 
 This week you'll be completing the scripts in the following files. But note, that we have different levels of difficulty contained within each file.
 
-- [ ] *prototypes.js* (Base, Hard)
-- [ ] *bringItTogether.js* (Pro)
+- [ ] *1_prototypes.js* (Base, Hard)
+- [ ] *2_bringItTogether.js* (Pro)
 
 Similar to last week's assignment, each script has some code ready for you with comments telling you what to write. Take the following as an example.
 
