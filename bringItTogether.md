@@ -29,7 +29,7 @@ Something like this:
 var room = {
   capacity: 20,
   rollingChairs: [
-    {RollingChair object}, {RollingChar object}, ...
+    {RollingChair object}, {RollingChair object}, ...
   ],
   cubes: [
     {Cube object}, {Cube object}, ...
@@ -39,7 +39,7 @@ var room = {
 
 More details about the _RollingChair_ object and the _Cube_ object are given in the `bringItTogether.js` file in comments and in Doc Strings.
 
-### Doc String 
+### Doc String
 
 You will notice that these constructors are documented with a special comment syntax called a `docstring`. It looks like this:
 
