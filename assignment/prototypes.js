@@ -16,10 +16,10 @@ var somethingFun = new Animal("Something", "Fun", "Cat");
 // an Animal object that is passed to it.
 function animalFirstandLastName(animalObject){
 // console log out somethingFun's first name here:
-console.log(animalObject.firstName);
+  console.log(animalObject.firstName);
 
-// console log out somethingFun's last name here:
-console.log(animalObject.lastName);
+  // console log out somethingFun's last name here:
+  console.log(animalObject.lastName);
 }
 
 
