@@ -123,46 +123,4 @@ describe('promode Testing the Classroom Builder Application', function() {
 
     // });
   });
-
-
-
-
-  /**
-  Set up a function spy using Sinon. This will count how many times the Book constructor is calledThrice
-  **/
-  // var sinon = require('sinon');
-  // var constructorSpy;
-  //
-  // before('running constructor tests', function() {
-  //   constructorSpy = sinon.spy(objects, "Book");
-  // });
-  //
-  // after(function() {
-  //   constructorSpy.restore();
-  // });
-
-  // describe('the createRoomsWithConstructor function', function() {
-  //   var  constructorSpy = sinon.spy(Room);
-  //   it('should call the Book constructor 3 times', function() {
-  //     var books = convertRooms();
-  //
-  //     // sinon spy counts the number of times the constructor was called
-  //     chai.expect(constructorSpy.called).to.be.true;
-  //   });
-  //
-  //   // it('should return 3 objects in an array', function() {
-  //   //   var books = convertRooms();
-  //   //   chai.expect(books).to.have.lengthOf(3);
-  //   // });
-  //
-  //   // it('should return book objects with 4 specific properties', function() {
-  //   //   var books = convertRooms();
-  //   //   chai.expect(books[0]).to.have.ownProperty('title');
-  //   //   chai.expect(books[0]).to.have.ownProperty('author');
-  //   //   chai.expect(books[0]).to.have.ownProperty('pageCount');
-  //   //   chai.expect(books[0]).to.have.ownProperty('haveRead');
-  //   // });
-  //   constructorSpy.reset();
-  // });
-
 });
