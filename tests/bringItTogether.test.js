@@ -97,16 +97,20 @@ describe('promode Testing the Classroom Builder Application', function() {
   describe('the room array converter', function() {
 
     it('should return an array of Objects', function() {
-      var newRooms = convertRoomsList(roomsArray);
+      var newRooms = convertRoomsList(roomsArray); // defined in the assignment file
+
+      // fix this test
       chai.expect(newRooms).to.be.instanceof(Array);
       chai.expect(newRooms[0]).to.be.instanceof(Object);
       chai.expect(newRooms[1]).to.be.instanceof(Object);
+      chai.expect(newRooms[2]).to.be.instanceof(Object);
+      chai.expect(newRooms[3]).to.be.instanceof(Object);
     });
 
     it('should return array with length that matches given rooms array', function() {
       var testArray = [[21, 13, 13, 'orange'], [24, 10, 40, 'green'], [25, 10, 55, 'purplish orange']];
       var newRooms = convertRoomsList(testArray);
-      chai.expect(newRooms).to.have.lengthOf(4);
+      chai.expect(newRooms).to.have.lengthOf(3);
     });
 
     // it('should call the convertRooms function', function() {
