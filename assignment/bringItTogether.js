@@ -58,7 +58,8 @@ function Room(capacity) {
 // 4 - The following function should create a Room object from an array of room data
 // and return the created room
 function convertRooms(roomAsArray) {
-  // 4a - Create a room object using value for the capacity
+  // 4a - Create a room object with the Room constructor you created above
+  // and pass into the constructor the value for the capacity from room array.
   // 4b - Create another loop that adds new rolling chair objects with type "rolling"
   // and the color provided in the array to the created room's rollingChairs array
   // 4c - Create yet another loop that adds new cube objects with a length of 24 to
