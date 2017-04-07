@@ -1,7 +1,5 @@
 describe('promode Testing the Classroom Builder Application', function() {
-
   describe('the Room constructor function', function() {
-
     describe('returned object has a property called: capacity', function() {
       it('should have a property capacity', function() {
         var room = convertRooms([2, 1, 1, 'red']);
@@ -13,7 +11,6 @@ describe('promode Testing the Classroom Builder Application', function() {
         chai.expect(room.capacity).to.be.equal(2);
       });
     });
-
 
     describe('returned object has a property called: rollingChairs', function() {
       it('should have a property rollingChairs', function() {
@@ -31,7 +28,6 @@ describe('promode Testing the Classroom Builder Application', function() {
         var room = convertRooms([8, 4, 4, 'maroon']);
         chai.expect(room.rollingChairs).to.have.lengthOf(4);
       });
-
     });
 
     describe('returned object has a property called: cubes', function() {
@@ -50,31 +46,23 @@ describe('promode Testing the Classroom Builder Application', function() {
         var room = convertRooms([30, 13, 17, 'firetruck red']);
         chai.expect(room.cubes).to.have.lengthOf(17);
       });
-
-
     });
-
   }); // end Room constructor tests
 
-
   describe('the Cube constructor function', function() {
-    describe('returned object has a property called: length', function() {
-      it('should have a property "length"', function() {
-        var cube = new Cube(18);
-        chai.expect(cube).to.have.ownProperty('length');
-      });
-
-      it('should have a method "volume" that returns the volume', function() {
-        var cube = new Cube(4);
-        //Does it have the volume method:
-        expect(cube).to.respondTo('volume');
-
-        //Does volume method work:
-        chai.expect(cube.volume()).to.be.equal(64);
-
-      });
+    it('should have a property "length"', function() {
+      var cube = new Cube(18);
+      chai.expect(cube).to.have.ownProperty('length');
     });
 
+    it('should have a method "volume" that returns the volume', function() {
+      var cube = new Cube(4);
+      //Does it have the volume method:
+      expect(cube).to.respondTo('volume');
+
+      //Does volume method work:
+      chai.expect(cube.volume()).to.be.equal(64);
+    });
   });
 
   describe('the RollingChair constructor function', function() {
@@ -91,11 +79,9 @@ describe('promode Testing the Classroom Builder Application', function() {
         chai.expect(chair.color).to.be.equal('yellow');
       });
     });
-
   });
 
   describe('the room array converter', function() {
-
     it('should return an array of Objects', function() {
       var newRooms = convertRoomsList(roomsArray); // defined in the assignment file
 
