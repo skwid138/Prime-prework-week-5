@@ -1,3 +1,22 @@
+/**
+ * This entire file is a web application. Nearly everything in this file relies on
+ * other functions in and variables also within this file.
+ *
+ * Before getting started, read through this code.
+ *
+ * The goal here is to convert an array of arrays to an array of Room objects.
+ *
+ * The steps required to achieve this goal are laid out below.
+ *  - Steps 1-3 create three constructor functions that will allow us to create the objects
+ * necessary for conversion to a Room object. The Room object also contains arrays of
+ * Cube objects and Rolling Chair objects.
+ * - Step 4 creates a function that does one thing well: convert an array of data into
+ * a room object.
+ * - Step 5 creates a function that loops over an array of arrays, the calls the
+ * single-purpose function above for each containing array. So, an array of 4 arrays will
+ * produce an array of 4 Room objects.
+ */
+
 // 1 - Create properties and methods for the Cube constructor
 /**
  * Represents a Cube seat
