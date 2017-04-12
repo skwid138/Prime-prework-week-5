@@ -1,61 +1,54 @@
-describe('promode Testing the Classroom Builder Application', function() {
-  describe('the Room constructor function', function() {
-    describe('returned object has a property called: capacity', function() {
-      it('should have a property capacity', function() {
-        var room = convertRooms([2, 1, 1, 'red']);
-        chai.expect(room).to.have.ownProperty('capacity');
-      });
+describe('promode bringItTogether.js', function() {
+  describe('convertRooms()', function () {
+    var room = convertRooms([2, 1, 3, 'red']);
 
-      it('capacity should match the number given in constructor', function() {
-        var room = new Room(2);
-        chai.expect(room.capacity).to.be.equal(2);
+    it('returns a room object with a property capacity with the expected value', function() {
+      chai.expect(room).to.have.ownProperty('capacity');
+      chai.expect(room.capacity).to.be.equal(2);
+    });
+
+    it('returns a room object with a property rollingChairs with an array containing the expected number of rollingChair objects', function() {
+      chai.expect(room).to.have.ownProperty('rollingChairs');
+      chai.expect(room.rollingChairs).to.have.lengthOf(1);
+      room.rollingChairs.forEach(function (rollingChair) {
+        chai.expect(rollingChair).to.be.instanceof(Object);
       });
     });
 
-    describe('returned object has a property called: rollingChairs', function() {
-      it('should have a property rollingChairs', function() {
-        var room = convertRooms([2, 1, 1, 'blue']);
-        chai.expect(room).to.have.ownProperty('rollingChairs');
+    it('returns a room object with a property cube with an array containing the expected number of cube objects', function() {
+      chai.expect(room).to.have.ownProperty('cubes');
+      chai.expect(room.cubes).to.have.lengthOf(3);
+      room.cubes.forEach(function (cube) {
+        chai.expect(cube).to.be.instanceof(Object);
       });
+    });
+  });
 
-      it('rollingChairs should be an array of objects', function() {
-        var room = convertRooms([10, 3, 7, 'neon']);
+  describe('Room()', function () {
+    var room = new Room(2);
+
+    it('has a capacity property that matches the number given in constructor', function () {
+      chai.expect(room.capacity).to.be.equal(2);
+    });
+
+    it('has a rollingChairs property that is an empty array', function () {
         chai.expect(room.rollingChairs).to.be.instanceof(Array);
-        chai.expect(room.rollingChairs[0]).to.be.instanceof(Object);
-      });
-
-      it('rollingChairs length should match given array[1]', function() {
-        var room = convertRooms([8, 4, 4, 'maroon']);
-        chai.expect(room.rollingChairs).to.have.lengthOf(4);
-      });
+        chai.expect(room.rollingChairs).to.have.lengthOf(0);
     });
 
-    describe('returned object has a property called: cubes', function() {
-      it('should have a property cube', function() {
-        var room = convertRooms([2, 1, 1, 'blue']);
-        chai.expect(room).to.have.ownProperty('cubes');
-      });
-
-      it('cubes should be an array of objects', function() {
-        var room = convertRooms([6, 2, 4, 'red']);
+    it('has a cubes property that is an empty array', function () {
         chai.expect(room.cubes).to.be.instanceof(Array);
-        chai.expect(room.cubes[0]).to.be.instanceof(Object);
-      });
-
-      it('cubes length should match given array[2]', function() {
-        var room = convertRooms([30, 13, 17, 'firetruck red']);
-        chai.expect(room.cubes).to.have.lengthOf(17);
-      });
+        chai.expect(room.cubes).to.have.lengthOf(0);
     });
-  }); // end Room constructor tests
+  });
 
-  describe('the Cube constructor function', function() {
-    it('should have a property "length"', function() {
+  describe('Cube()', function() {
+    it('has a property of length', function() {
       var cube = new Cube(18);
       chai.expect(cube).to.have.ownProperty('length');
     });
 
-    it('should have a method "volume" that returns the volume', function() {
+    it('has a volume method that returns the volume', function() {
       var cube = new Cube(4);
       //Does it have the volume method:
       expect(cube).to.respondTo('volume');
@@ -65,48 +58,42 @@ describe('promode Testing the Classroom Builder Application', function() {
     });
   });
 
-  describe('the RollingChair constructor function', function() {
-    describe('returned object has a property called: color', function() {
-      it('should have a string property of type', function() {
-        var chair = new RollingChair('rolling', 'yellow');
-        chai.expect(chair).to.have.ownProperty('type');
-        chai.expect(chair.type).to.be.equal('rolling');
-      });
+  describe('RollingChair()', function() {
+    it('has a string property of type', function() {
+      var chair = new RollingChair('rolling', 'yellow');
+      chai.expect(chair).to.have.ownProperty('type');
+      chai.expect(chair.type).to.be.equal('rolling');
+    });
 
-      it('should have a string property of color', function() {
-        var chair = new RollingChair('rolling', 'yellow');
-        chai.expect(chair).to.have.ownProperty('type');
-        chai.expect(chair.color).to.be.equal('yellow');
-      });
+    it('has a string property of color', function() {
+      var chair = new RollingChair('rolling', 'yellow');
+      chai.expect(chair).to.have.ownProperty('color');
+      chai.expect(chair.color).to.be.equal('yellow');
     });
   });
 
-  describe('the room array converter', function() {
-    it('should return an array of Objects', function() {
-      var newRooms = convertRoomsList(roomsArray); // defined in the assignment file
+  describe('convertRoomsList()', function() {
+    var testArray = [[21, 13, 13, 'orange'], [24, 10, 40, 'green'], [25, 10, 55, 'purplish orange']];
+
+    it('returns an array of room objects', function() {
+      var newRooms = convertRoomsList(testArray); // defined in the assignment file
 
       // fix this test
       chai.expect(newRooms).to.be.instanceof(Array);
-      chai.expect(newRooms[0]).to.be.instanceof(Object);
-      chai.expect(newRooms[1]).to.be.instanceof(Object);
-      chai.expect(newRooms[2]).to.be.instanceof(Object);
-      chai.expect(newRooms[3]).to.be.instanceof(Object);
+      newRooms.forEach(function (newRoom) {
+        chai.expect(newRoom).to.be.instanceof(Object);
+      });
     });
 
-    it('should return array with length that matches given rooms array', function() {
-      var testArray = [[21, 13, 13, 'orange'], [24, 10, 40, 'green'], [25, 10, 55, 'purplish orange']];
+    it('returns array with length that matches given rooms array', function() {
       var newRooms = convertRoomsList(testArray);
       chai.expect(newRooms).to.have.lengthOf(3);
     });
 
-    // it('should call the convertRooms function', function() {
-    //   var spy = sinon.spy(convertRooms);
-    //   convertRoomsList(roomsArray);
-    //   // chai.expect(room.cubes).to.be.instanceof(Array);
-    //   // assert(spy.callCount).to.be.equal.equal(4)
-    //   expect(spy).to.be.called;
-    // });
-
-    // });
+    it('calls the convertRooms function', function() {
+      var spy = sinon.spy(convertRooms);
+      convertRoomsList(testArray);
+      chai.expect(spy).to.be.called;
+    });
   });
 });
