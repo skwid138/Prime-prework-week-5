@@ -63,7 +63,7 @@ function RollingChair(type, color) {
 **/
 
 function Room(capacity) {
-  // 3a - Create a capacity property that is equal to the provided array's first index
+  // 3a - Create a capacity property that is equal to the provided capacity argument
 
 
   // 3b - Create a rollingChairs property that is equal to an empty array
