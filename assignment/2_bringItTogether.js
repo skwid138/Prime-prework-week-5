@@ -21,7 +21,7 @@
 /**
  * Represents a Cube seat
  * @constructor
- * @param {String} length - length of each side
+ * @param {Number} length - length of each side
  * @property {Function} volume - method that calculates the volume of the cube
 **/
 function Cube(length) {
@@ -69,7 +69,7 @@ function Room(capacity) {
   // 3b - Create a rollingChairs property that is equal to an empty array
 
 
-  // 3b - Create a cubes property that is equal to an empty array
+  // 3c - Create a cubes property that is equal to an empty array
 
 
 }
