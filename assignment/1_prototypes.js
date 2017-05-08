@@ -15,9 +15,9 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 // Complete this function so that it will log on seperate lines the first and
 // last name of an Animal object that is passed to it.
 function animalFirstandLastName(animalObject){
-  // console log out somethingFun's first name here:
+  // console log out animalObject's first name here:
 
-  // console log out somethingFun's last name here:
+  // console log out animalObject's last name here:
 }
 
 // PART 3 (Hard Mode)
