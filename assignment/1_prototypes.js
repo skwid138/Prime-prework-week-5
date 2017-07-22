@@ -25,7 +25,7 @@ function animalFirstandLastName(animalObject){
 
 
 // PART 3 (Hard Mode)
-// add a method to somethingFun named "meow()" that console logs "moew" when called. ex: somethingFun.meow()
+// add a method to somethingFun named "meow()" that console logs "meow" when called. ex: somethingFun.meow()
 somethingFun.meow = function() {
   console.log('meow');
 };
