@@ -22,7 +22,7 @@ function animalFirstandLastName(animalObject){
 
 // PART 3 (Hard Mode)
 // add a method to somethingFun named "meow()" that console logs
-// "moew" when called. ex: somethingFun.meow()
+// "meow" when called. ex: somethingFun.meow()
 
 // add another method to somethingFun named "isHappy" that receives a boolean
 // argument called "happy".
