@@ -52,7 +52,7 @@ function Cube(length) {
  * @param {String} color - color of the seat fabric
 **/
 function RollingChair(type, color) {
-    // console.log('started RollingChair');
+  // console.log('started RollingChair');
   // 2a - Create a type property that is equal to the provided argument, type
   this.type = type;
 
@@ -90,7 +90,7 @@ function Room(capacity) {
 // 4 - The following function should create a Room object from an array of room data
 // and return the created room
 function convertRooms(roomAsArray) {
-    // console.log('started convertRooms');
+  // console.log('started convertRooms');
   // 4a - Create a room object with the Room constructor you created above
   // and pass into the constructor the value for the capacity from room array.
      var room = new Room(roomAsArray[0]);
@@ -133,4 +133,5 @@ function convertRoomsList(arrayOfRooms){
 
 //Call convertRoomsList
 convertRoomsList(roomsArray);
-// convertRoomsList(testArray);
+// convertRoomsList(test);
+// console.log(convertRoomsList(roomsArray));
